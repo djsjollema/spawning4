@@ -1,0 +1,13 @@
+body{ 
+	background-color: azure; 
+}
+
+#canvas{
+	display: block;
+	margin: auto;
+	border: 2px black solid;
+	background-image: url(media/image/background.png);
+	background-size: 100% 100%;
+	cursor: none;
+
+}
