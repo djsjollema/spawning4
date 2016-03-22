@@ -5,13 +5,15 @@ var Enemy = {
 	yspeed:1,
 	w:10,
 	h:10,
-	img:0,
+	setImage:function(imageURL){
+		this.img = new Image();
+		this.img.src = imageURL;
+		this.img.addEventListener('load', this.imageLoaded.bind(this));
+	},
+	imageLoaded: function(){
+		console.log('image loaded');
+	},
 	update:function(){
 		this.y += this.yspeed;
-	},
-	draw:function(context,img){
-		this.width = this.img.width;
-		context.drawImage(img,this.x,this.y,this.w,this.h);
-		
 	}
 }
